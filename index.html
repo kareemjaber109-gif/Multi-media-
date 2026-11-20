@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>التطوع في الهلال الأحمر المصري</title>
 <meta name="description" content="صفحة تعريفية بالتطوع في الهلال الأحمر المصري وفريق WASH.">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
@@ -29,6 +30,12 @@ h2::after{content:"";display:block;width:56px;height:4px;background:var(--red);b
 .btn.lg{font-size:1.2rem;padding:16px 40px}
 .ph{display:flex;align-items:center;justify-content:center;text-align:center;border:2px dashed #c9a0a5;background:repeating-linear-gradient(45deg,#fff,#fff 10px,#faf3f4 10px,#faf3f4 20px);color:var(--red);font-size:.9rem;border-radius:var(--r);padding:10px}
 .ph.logo{width:140px;height:48px;font-size:.78rem;line-height:1.3;flex:none}
+.site-logo{height:46px;width:auto;max-width:180px;object-fit:contain;display:block}
+.loader-logo{height:72px;width:auto;max-width:220px;object-fit:contain;display:block;margin-bottom:8px}
+.footer-logo-wrap{display:inline-flex;align-items:center;justify-content:center;background:#fff;padding:8px 16px;border-radius:12px;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,.2);transition:.25s}
+.footer-logo-wrap:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.footer-logo{height:42px;width:auto;max-width:160px;object-fit:contain;display:block}
+.logo-link{display:flex;align-items:center;flex:none}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.25s}
 .alt .card{border-color:transparent}
@@ -121,7 +128,7 @@ footer .ph{background:#2a1f22;border-color:#6b4a50;color:#e7b8be;margin-bottom:1
  .hero .wrap,.split,footer .g{grid-template-columns:1fr}
  .hero .ph{min-height:260px}
 }
-@media(max-width:560px){section{padding:52px 0}.two{grid-template-columns:1fr}.ph.logo{width:120px}}
+@media(max-width:560px){section{padding:52px 0}.two{grid-template-columns:1fr}.ph.logo{width:120px}.site-logo{height:38px;max-width:130px}.loader-logo{height:54px;max-width:170px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
 /* ===== تحسينات الشكل ===== */
 :root{--red:#a3132a;--red-d:#5c0912;--glow:rgba(163,19,42,.32)}
@@ -198,7 +205,7 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
 
 <!-- شاشة التحميل -->
 <div id="loader" role="status">
-  <div class="ph logo">أضف اللوجو هنا</div>
+  <img src="logo.png" alt="شعار الهلال الأحمر المصري" class="loader-logo">
   <div class="spin"></div>
   <p>جارٍ تحميل الصفحة…</p>
 </div>
@@ -206,7 +213,9 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
 <!-- شريط التنقل -->
 <header>
   <div class="wrap nav">
-    <a href="#home" class="ph logo">أضف اللوجو هنا</a>
+    <a href="#home" class="logo-link" aria-label="الصفحة الرئيسية للهلال الأحمر المصري">
+      <img src="logo.png" alt="شعار الهلال الأحمر المصري" class="site-logo">
+    </a>
     <button id="burger" aria-label="القائمة" aria-expanded="false">☰</button>
     <ul id="menu">
       <li><a href="#home">الرئيسية</a></li>
@@ -345,7 +354,9 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
   <div class="wrap">
     <div class="g">
       <div>
-        <div class="ph logo">أضف اللوجو هنا</div>
+        <a href="#home" class="footer-logo-wrap" aria-label="الرئيسية">
+          <img src="logo.png" alt="شعار الهلال الأحمر المصري" class="footer-logo">
+        </a>
         <p>صفحة تعريفية بالتطوع في الهلال الأحمر المصري وفريق WASH.</p>
       </div>
       <div>
