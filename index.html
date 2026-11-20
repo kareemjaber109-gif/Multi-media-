@@ -71,11 +71,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdro
 .steps li{counter-increment:n;display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 18px}
 .steps li::before{content:counter(n);flex:none;width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800}
 .note{background:var(--red-l);border-inline-start:4px solid var(--red);padding:14px 18px;border-radius:8px;margin-top:22px}
-/* branches */
-.br{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
-.br .card{padding:14px;text-align:center}
-.br .ph{height:70px;margin-bottom:10px;font-size:.78rem}
-.br h3{font-size:.95rem}
 /* teams */
 .team{cursor:pointer;text-align:start;font:inherit;width:100%}
 .team.on{border-color:var(--red);background:var(--red-l)}
@@ -221,7 +216,6 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
       <li><a href="#home">الرئيسية</a></li>
       <li><a href="#about">عن الهلال الأحمر</a></li>
       <li><a href="#volunteer">التطوع</a></li>
-      <li><a href="#branches">الفروع</a></li>
       <li><a href="#teams">الفرق والأنشطة</a></li>
       <li><a href="#wash">فريق WASH</a></li>
       <li><a href="#contact">تواصل معنا</a></li>
@@ -274,15 +268,6 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
     </ol>
     <a class="btn lg" href="https://ercvolunteers.org/" target="_blank" rel="noopener">انتقل إلى موقع التطوع</a>
     <p class="note">يمكنك التواصل مع فرع الهلال الأحمر في محافظتك لمعرفة فرص التطوع والانضمام إلى الفرق.</p>
-  </div>
-</section>
-
-<!-- الفروع -->
-<section class="alt" id="branches">
-  <div class="wrap">
-    <h2>فروع الهلال الأحمر المصري في مصر</h2>
-    <p class="lead">للهلال الأحمر المصري فروع في مختلف محافظات الجمهورية، وتقدم كل فرع خدمات وأنشطة تطوعية قريبة من المجتمع.</p>
-    <div class="br rv" id="brGrid"></div>
   </div>
 </section>
 
@@ -363,7 +348,7 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
         <h4>روابط سريعة</h4>
         <ul>
           <li><a href="#home">الرئيسية</a></li><li><a href="#about">عن الهلال الأحمر</a></li>
-          <li><a href="#volunteer">التطوع</a></li><li><a href="#branches">الفروع</a></li>
+          <li><a href="#volunteer">التطوع</a></li><li><a href="#teams">الفرق والأنشطة</a></li>
           <li><a href="#wash">فريق WASH</a></li><li><a href="#contact">تواصل معنا</a></li>
         </ul>
       </div>
@@ -393,9 +378,6 @@ fill('aboutCards',[
  ['التوعية والصحة','نشر الوعي الصحي ودعم الخدمات الإسعافية.'],
  ['التطوع المجتمعي','مبادرات يشارك فيها المتطوعون لخدمة مجتمعهم.']
 ].map(a=>card(...a)).join(''));
-
-const govs='القاهرة،الجيزة،الإسكندرية،أسوان،الأقصر،المنيا،بني سويف،الدقهلية،الشرقية،الغربية،المنوفية،كفر الشيخ،دمياط،بورسعيد،الإسماعيلية،السويس،شمال سيناء،جنوب سيناء،البحر الأحمر،مطروح،الوادي الجديد،قنا،سوهاج،أسيوط،الفيوم،البحيرة'.split('،');
-fill('brGrid',govs.map(g=>`<div class="card"><div class="ph">صورة الفرع</div><h3>${g}</h3></div>`).join(''));
 
 const teams=[
  ['الاستجابة للطوارئ','التدخل في الكوارث وتقديم المساعدات العاجلة.'],
