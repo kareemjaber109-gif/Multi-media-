@@ -150,6 +150,9 @@ h2::after{width:80px;height:5px;background:linear-gradient(90deg,var(--red),#ff6
 .hero .btn.out:hover{background:rgba(255,255,255,.16);color:#fff}
 .hero .ph{min-height:430px;background:rgba(255,255,255,.1);border:2px dashed rgba(255,255,255,.55);color:#fff;backdrop-filter:blur(8px);border-radius:32px;box-shadow:0 34px 70px rgba(0,0,0,.35);transform:rotate(-2.5deg);transition:.4s}
 .hero .ph:hover{transform:rotate(0) scale(1.02)}
+.hero-media{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.15);transform:rotate(-2deg);transition:transform .4s ease,box-shadow .4s ease}
+.hero-media:hover{transform:rotate(0) scale(1.02);box-shadow:0 36px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.25)}
+.hero-img{width:100%;height:100%;max-height:430px;object-fit:cover;display:block}
 /* البطاقات */
 .card{position:relative;overflow:hidden;border-radius:22px;box-shadow:0 10px 30px rgba(60,10,20,.07)}
 .card::before{content:"";position:absolute;inset-inline:0;top:0;height:5px;background:linear-gradient(90deg,var(--red),#ff6b7d);transform:scaleX(0);transform-origin:right;transition:.35s}
@@ -193,7 +196,7 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
 .cta h2{background:none;-webkit-text-fill-color:#fff;font-size:clamp(2rem,5vw,3.2rem)}
 .cta .btn{box-shadow:0 14px 34px rgba(0,0,0,.3)}
 #fab.show{animation:pu 2.2s infinite}
-@media(max-width:1000px){.hero{padding:60px 0 100px}.hero .ph{min-height:260px;transform:none}}
+@media(max-width:1000px){.hero{padding:60px 0 100px}.hero .ph{min-height:260px;transform:none}.hero-media{transform:none;max-width:540px;margin:20px auto 0}}
 </style>
 </head>
 <body>
@@ -237,7 +240,9 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
         <a class="btn out" href="https://egyptianrc.org/ar/homepage" target="_blank" rel="noopener">الموقع الرسمي</a>
       </div>
     </div>
-    <div class="ph">أضف صورة رئيسية هنا</div>
+    <div class="hero-media">
+      <img src="hero.jpg" alt="متطوعو الهلال الأحمر المصري أثناء العمل الميداني" class="hero-img">
+    </div>
   </div>
 </section>
 
