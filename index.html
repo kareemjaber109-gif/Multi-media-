@@ -153,6 +153,9 @@ h2::after{width:80px;height:5px;background:linear-gradient(90deg,var(--red),#ff6
 .hero-media{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.15);transform:rotate(-2deg);transition:transform .4s ease,box-shadow .4s ease}
 .hero-media:hover{transform:rotate(0) scale(1.02);box-shadow:0 36px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.25)}
 .hero-img{width:100%;height:100%;max-height:430px;object-fit:cover;display:block}
+.about-media{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 16px 36px rgba(60,10,20,.12);border:1px solid var(--line);transition:transform .35s ease,box-shadow .35s ease}
+.about-media:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(155,18,32,.18);border-color:var(--red)}
+.about-img{width:100%;height:100%;min-height:280px;max-height:360px;object-fit:cover;display:block}
 /* البطاقات */
 .card{position:relative;overflow:hidden;border-radius:22px;box-shadow:0 10px 30px rgba(60,10,20,.07)}
 .card::before{content:"";position:absolute;inset-inline:0;top:0;height:5px;background:linear-gradient(90deg,var(--red),#ff6b7d);transform:scaleX(0);transform-origin:right;transition:.35s}
@@ -254,7 +257,9 @@ details[open]{box-shadow:0 14px 34px var(--glow)}
         <h2>عن الهلال الأحمر المصري</h2>
         <p class="lead" style="margin-bottom:0">الهلال الأحمر المصري منظمة إنسانية تطوعية تعمل في الاستجابة للكوارث، وتقديم الخدمات الصحية، والتنمية الاجتماعية، ودعم المجتمعات، وتشجيع العمل التطوعي في مختلف أنحاء مصر.</p>
       </div>
-      <div class="ph">أضف صورة هنا</div>
+      <div class="about-media">
+        <img src="about.jpg" alt="قوافل الإغاثة والمساعدات الإنسانية للهلال الأحمر المصري" class="about-img">
+      </div>
     </div>
     <div class="grid rv" id="aboutCards" style="margin-top:32px"></div>
   </div>
